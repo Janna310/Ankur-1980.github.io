@@ -3,31 +3,38 @@
   <div class="info-container" *ngFor="let item of userInfo">
     <img class="profile-pic" width=" " src="{{ item.picture }}" alt="" />
     <div class="user-info-container" *ngFor="let item of userInfo">
-      <h1>User Name: {{ item.first_name }} {{ item.last_name }}</h1>
-      <p>Bio: {{ item.bio }}</p>
+      <h1>{{ item.first_name }} {{ item.last_name }}</h1>
+      <div class="bio">Bio: {{ item.bio }}</div>
       <p>Age: {{ item.age }}</p>
-      <p>username: {{ item.username }}</p>
+      <p>{{ item.username }}</p>
       <button (click)="logOut()">Log Out</button>
     </div>
   </div>
   <!-- Feed -->
   <div class="feed-parent">
     <div *ngFor="let post of posts">
-      <img
-        class="feed-images"
-        width=" "
-        src="{{ post.image_location }}"
-        alt="{{ post.drink_name }}"
-      />
-      <div>
-        <p>Drink Name: {{ post.drink_name }}</p>
-        <p>Rating: {{ post.rating }}</p>
-        <p>Description: {{ post.description }}</p>
-      </div>
-      <!-- post actions -->
-      <div class="post-actions">
-        <!-- <a routerLink="/post-details/{{ post.postID }}">More Details</a>
-        <a routerLink="/post-details/{{ post.postID }}/edit">Edit</a> -->
+      <div class="feed-info">
+        <img
+          width=" "
+          class="feed-images"
+          src="{{ post.image_location }}"
+          alt="{{ post.drink_name }}"
+        />
+        <div class="feed-details">
+          <div class="catagories">
+            <label>Drink Name: </label>
+            <div>{{ post.drink_name }}</div>
+          </div>
+          <div class="catagories">
+            <label>Rating:</label>
+            <div>{{ post.rating }}</div>
+          </div>
+          <div class="catagories">
+            <label>Description:</label>
+            <div>{{ post.description }}</div>
+          </div>
+        </div>
+        <!-- post actions -->
         <button (click)="deletePost(post.post_id)">Delete</button>
       </div>
     </div>

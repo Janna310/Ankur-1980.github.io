@@ -43,10 +43,6 @@ select {
   border-style: none;
 }
 
-/* Media Query for Tablet */
-@media screen and (max-width: 768px) {
-}
-
 /* Media Query for phone */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 414px) {
 }

@@ -67,6 +67,7 @@ a {
     box-shadow: 3px 3px 5px black;
   }
   .method {
+    text-align: center;
     width: 600px;
     padding: 5px;
     margin-bottom: 8px;
@@ -74,7 +75,7 @@ a {
   }
 }
 
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 414px) {
   .details {
     margin-top: 5vh;
   }

@@ -10,6 +10,11 @@ import { GuestGuard } from './services/guest.guard';
 
 const routes: Routes = [
   { path: '', component: LoginFormComponent, canActivate: [GuestGuard] },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
 
   {
     path: 'profile',
@@ -67,12 +72,6 @@ const routes: Routes = [
         (module) => module.UserRecipesModule
       ),
     canActivate: [AuthGuard],
-  },
-
-  {
-    path: '/',
-    redirectTo: 'login',
-    pathMatch: 'full',
   },
 ];
 

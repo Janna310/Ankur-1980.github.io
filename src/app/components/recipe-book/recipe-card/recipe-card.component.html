@@ -7,7 +7,7 @@
       width="125px"
     />
     <div class="drink-name">{{ recipe.strDrink }}</div>
-    <a routerLink="recipe-details/{{ recipe.idDrink }}">more details</a>
+    <a routerLink="recipe-details/{{ recipe.idDrink }}">View Details</a>
     <div class="saved" (click)="toggleAddRemove()">
       <div class="unsaved" *ngIf="show"></div>
       <div class="save" *ngIf="!show"></div>
