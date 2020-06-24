@@ -58,7 +58,7 @@ img {
 }
 
 /* Phone Sizing */
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 414px) {
   .nav-parent {
     bottom: 0 !important;
     width: 100%;
