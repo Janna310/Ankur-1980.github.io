@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "preinstall": "npm install -g angular-cli",
-    "postinstall": "ng build --aot -prod",
+    "postinstall": "ng build --aot --prod",
     "heroku-postbuild": "ng build --prod",
     "ng": "ng",
     "start": "npm run build & concurrently --kill-others \"npm run serve-api\" \"npm run serve\"",
