@@ -1,0 +1,10 @@
+<div class="global-parent">
+  <h1>home bar</h1>
+  <p *ngIf="homeBar.length === 0">You have nothing to drink at home?</p>
+  <div class="container" *ngIf="homeBar.length > 0">
+    <div *ngFor="let item of homeBar">
+      <p>{{ item.fav_info }}</p>
+      <button (click)="onDelete(item.fav_id)">Delete</button>
+    </div>
+  </div>
+</div>

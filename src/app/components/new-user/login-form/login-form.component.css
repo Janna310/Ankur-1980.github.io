@@ -1,0 +1,30 @@
+.background-img {
+  /* margin-right: 30vh; */
+  background-image: url(./Margarita/margarita.svg);
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+/* New to ?  */
+.linkInfo {
+  margin-top: 10px;
+  align-self: center;
+}
+
+/* media Query for Tablets */
+@media screen and (max-width: 768px) {
+}
+
+/* Media Query for phone */
+
+@media screen and (max-width: 640px) {
+}
+
+@media screen and (max-width: 360px) {
+  .background-img {
+    width: 80%;
+    height: 80%;
+  }
+}

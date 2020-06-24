@@ -1,0 +1,44 @@
+.background-img {
+  margin-left: 5vh;
+  background-image: url(../Hurricane/Hurricane.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.card-container {
+  margin: 5vh 5vw;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 15px;
+}
+
+.drink-name {
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(4, auto);
+  }
+  .drink-name {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .card-container {
+    margin: 10vh 5vw;
+    width: 400px;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card-container {
+    width: 320px;
+  }
+}

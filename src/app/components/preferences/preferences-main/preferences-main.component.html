@@ -1,0 +1,43 @@
+<div class="background-img"></div>
+<div class="global-parent">
+  <h1>Preferences Main</h1>
+  <!-- <prefer-nav></prefer-nav> -->
+  <div class="preferences-nav">
+    <button routerLink="/recipe-book">
+      Search for a recipe
+    </button>
+
+    <button routerLink="/user-recipes/user-recipe-form">
+      Add a recipe
+    </button>
+  </div>
+  <div class="preferences-nav">
+    <!-- <img width="40px" src="../../Icons/RecipeBook/Rbook.png" alt=" " /> -->
+    <button class="secondary" id="home" (click)="displayFavorite('home')">
+      What's at Home
+    </button>
+
+    <button class="secondary" id="places" (click)="displayFavorite('bars')">
+      Favorite Places
+    </button>
+
+    <button
+      class="secondary"
+      id="bartenders"
+      (click)="displayFavorite('bartenders')"
+    >
+      Favorite Bartenders
+    </button>
+
+    <button class="secondary" id="save" (click)="displayFavorite('favDrinks')">
+      Saved Recipes
+    </button>
+  </div>
+</div>
+<preferences-create></preferences-create>
+<preferences-locations *ngIf="displayOthers === 'bars'"></preferences-locations>
+<preferences-home-bar *ngIf="displayOthers === 'home'"></preferences-home-bar>
+<preferences-drinks *ngIf="displayOthers === 'favDrinks'"></preferences-drinks>
+<preferences-bartenders
+  *ngIf="displayOthers === 'bartenders'"
+></preferences-bartenders>

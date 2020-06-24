@@ -1,0 +1,94 @@
+.background-img {
+  background-image: url(../Hurricane/Hurricane.svg);
+  background-repeat: no-repeat;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  margin: 15px 0 5px 0;
+  color: rgb(236, 184, 92);
+  align-self: center;
+}
+
+img {
+  margin-bottom: 10px;
+  width: 400px;
+  height: auto;
+  border: 2px solid rgb(236, 184, 92);
+  box-shadow: 3px 3px 5px black;
+}
+
+.info {
+  justify-content: center;
+  color: White;
+  font-size: 18px;
+  font-weight: 300;
+  flex-wrap: wrap;
+}
+
+ul {
+  justify-content: center;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 10px;
+  column-gap: 30px;
+}
+
+.method {
+  width: 700px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  margin-bottom: 8px;
+}
+
+a {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #80bdad;
+  color: #204051;
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    margin-bottom: 10px;
+    width: 400px;
+    height: auto;
+    border: 2px solid rgb(236, 184, 92);
+    box-shadow: 3px 3px 5px black;
+  }
+  .method {
+    width: 600px;
+    padding: 5px;
+    margin-bottom: 8px;
+    background-color: rgba(52, 43, 56, 0.8);
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .details {
+    margin-top: 5vh;
+  }
+
+  h3 {
+    color: white;
+  }
+  img {
+    margin-bottom: 10px;
+    width: 250px;
+  }
+
+  .method {
+    width: 340px;
+    margin-bottom: 10px;
+  }
+}

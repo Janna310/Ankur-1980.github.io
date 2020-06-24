@@ -1,0 +1,16 @@
+<div class="card-container">
+  <div class="card">
+    <img
+      class="image"
+      src="{{ recipe.strDrinkThumb }}"
+      alt="{{ recipe.strDrink }}"
+      width="125px"
+    />
+    <div class="drink-name">{{ recipe.strDrink }}</div>
+    <a routerLink="recipe-details/{{ recipe.idDrink }}">more details</a>
+    <div class="saved" (click)="toggleAddRemove()">
+      <div class="unsaved" *ngIf="show"></div>
+      <div class="save" *ngIf="!show"></div>
+    </div>
+  </div>
+</div>

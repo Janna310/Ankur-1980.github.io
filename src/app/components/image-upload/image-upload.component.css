@@ -1,0 +1,32 @@
+input {
+  display: none;
+}
+
+.image-upload-container {
+  cursor: pointer;
+}
+
+.img-preview-container {
+  background-color: #f7f7f7;
+  position: relative;
+}
+.img-preview {
+  background: center center no-repeat;
+  background-size: contain;
+  height: 120px;
+  width: 120px;
+}
+
+.error {
+  display: none;
+}
+
+.success {
+  color: green;
+  z-index: 1;
+}
+
+.fail {
+  color: red;
+  z-index: 1;
+}

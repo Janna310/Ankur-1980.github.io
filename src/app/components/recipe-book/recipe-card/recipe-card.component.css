@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;*/
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.drink-name {
+  align-self: center;
+  margin-top: 10px;
+  color: rgb(236, 184, 92);
+  font-size: 20px;
+}
+
+.unsaved {
+  width: 15px;
+  height: 15px;
+  background-image: url(../../Icons/StarIconWhite/fav_white.svg);
+  background-repeat: no-repeat;
+}
+
+.save {
+  width: 15px;
+  height: 15px;
+  background-image: url(../../Icons/StarIcon/fav.svg);
+  background-repeat: no-repeat;
+}
+
+.saved {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .drink-name {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .drink-name {
+    /* width: 150px; */
+    font-size: 16px;
+    /* align-self: center; */
+    flex-wrap: wrap;
+  }
+}

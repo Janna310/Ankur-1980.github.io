@@ -1,0 +1,176 @@
+body {
+  background-color: #342b38;
+  margin: 0;
+  padding: 0;
+}
+.global-parent {
+  margin: 10vh 0 5vh 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+}
+
+* {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Link Styling */
+
+a {
+  text-decoration: none;
+  color: #80bdad;
+}
+
+a:hover {
+  color: #204051;
+  transition: all 0.3s ease 0s;
+}
+
+/* title styling */
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Image Styling */
+.image {
+  border: 2px solid rgb(236, 184, 92);
+  box-shadow: 3px 5px 4px rgb(30, 0, 49);
+}
+
+/* Form Styling */
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* link styling */
+
+input,
+textarea,
+select {
+  padding: 10px 0px;
+  margin: 5px 0;
+  color: hsl(0, 0%, 100%);
+  background-color: rgb(236, 184, 92, 0.5);
+  border: 2px solid rgb(236, 184, 92);
+  transition: all 0.3s ease 0s;
+  font-size: 12px;
+  width: 100%;
+}
+
+input:hover {
+  border: 2px solid #80bdad;
+}
+
+::placeholder {
+  padding-left: 5px;
+  color: white;
+}
+
+/* label Styling */
+label {
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+/* button Styling */
+button {
+  margin-top: 10px;
+  padding: 10px 0px;
+  background-color: rgb(236, 184, 92);
+  border: none;
+  transition: all 0.3s ease 0s;
+  font-size: 14px;
+  color: #ffffff;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #80bdad;
+}
+
+.center {
+  text-align: center;
+}
+
+/* .hidden {
+  display: none;
+} */
+
+/* .inline {
+  display: flex;
+  justify-content: space-between;
+} */
+
+/* tablet sizing */
+@media screen and (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    padding: 10px 5px;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .global-parent {
+    margin-top: 2vh 0;
+    padding: 0;
+  }
+
+  * {
+    font-size: 14px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 25px;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  /* Form pre-sets */
+  form {
+    margin-top: 5px;
+    width: 70%;
+  }
+  .form-group {
+    margin-top: 5px;
+  }
+  /* inputs, labels, links */
+  input,
+  textarea,
+  select {
+    padding: 10px 0;
+  }
+  ::placeholder {
+    margin-left: 2px;
+  }
+
+  label {
+    font-weight: bold;
+    margin-top: 0px;
+    font-size: 12px;
+  }
+}

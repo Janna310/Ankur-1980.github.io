@@ -1,0 +1,61 @@
+.background-img {
+  background-image: url(../Goblet/goblet.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.preferences-nav {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  margin: 0 10px 0 10px;
+  padding: 5px 10px;
+}
+
+.secondary {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgb(236, 184, 92);
+}
+
+/* link Icons */
+
+/* #home {
+  background-image: url(../../Icons/RecipeBook/Rbook_white.svg);
+  background-repeat: no-repeat;
+} 
+
+#places {
+  background-image: url(../../Icons/LocationIconWhite/locationwhite.svg);
+  background-repeat: no-repeat;
+}
+
+#bartenders {
+  background-image: url(../../Icons/bartender.svg);
+  background-repeat: no-repeat;
+}
+
+#save {
+  background-image: url(../../Icons/StarIconWhite/fav_white.svg);
+  background-repeat: no-repeat;
+} */
+
+/* Media Query for Tablet */
+/* @media screen and (max-width: 768px) {
+} */
+
+/* Media Query for phone */
+@media screen and (max-width: 360px) {
+  button {
+    margin: 0 10px 0 10px;
+    padding: 5px 6px;
+  }
+  .secondary {
+    background-color: rgb(236, 184, 92, 0.3);
+  }
+}

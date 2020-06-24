@@ -1,0 +1,56 @@
+section {
+  border: red 1px solid;
+}
+
+.child-container {
+  margin: 10px 0;
+}
+button {
+  margin-bottom: 15px;
+  padding: 5px 10px;
+}
+
+.child-container {
+  margin: 0;
+}
+
+.container {
+  flex-direction: row;
+}
+/* img {
+  margin-bottom: 10px;
+  width: 400px;
+  height: auto;
+  border: 2px solid rgb(236, 184, 92);
+  box-shadow: 3px 3px 5px black;
+} */
+/* .name {
+  font-size: 50px;
+  color: rgb(236, 184, 92);
+  margin-bottom: 5vh;
+}
+
+.info {
+  justify-content: center;
+  color: White;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+.how {
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20vh;
+}
+
+ul {
+  justify-content: center;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 10px;
+  column-gap: 30px;
+  color: white;
+} */

@@ -1,0 +1,79 @@
+Progress 
+
+.progress div {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(236, 184, 92, 0.5);
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.progress div.on,
+.progress div.answered {
+  background-color: rgb(236, 184, 92);
+}
+
+/* Question */
+.ans-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ans {
+  display: inline-block;
+  border: 2px solid rgb(236, 184, 92);
+  border-radius: 6px;
+  padding: 10px;
+  margin: 0px 15px 15px 0px;
+}
+
+.ans.selected {
+  border-color: #80bdad;
+}
+
+.unanswered .ans {
+  cursor: pointer;
+}
+
+.unanswered .ans:hover {
+  background-color: rgb(236, 184, 92, 0.5);
+  transition: all 0.3s ease 0s;
+}
+.answered .ans {
+  cursor: default;
+}
+
+/* Feedback */
+
+.feedback {
+  margin-top: 20px;
+  transition: opacity 1.5s, margin-top 1.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.feedback .btn {
+  cursor: pointer;
+  background: #80bdad;
+}
+
+.feedback .btn:hover {
+  background: #80bdad;
+  background-color: rgb(236, 184, 92);
+  transition: all 0.3s ease 0s;
+}
+
+.answered .feedback {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .ans-container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,20 @@
+<!-- doesn't live here -->
+<!-- <user-recipes-create></user-recipes-create> -->
+
+<section>
+  <h1>User Inputted Recipes</h1>
+  <div *ngFor="let item of mockRecipes">
+    <img width="200px" src="{{ item.picture }}" alt="{{ item.drink_name }}" />
+    <h3>Drink Name: {{ item.drink_name }}</h3>
+    <p>Rating: {{ item.rating }}</p>
+    <p>Glassware: {{ item.glassware }}</p>
+    <p>location: {{ item.location }}</p>
+    <p>location: {{ item.location }}</p>
+    <p>Ingredient 1 {{ item.amount_1 }} {{ item.ingredient_1 }}</p>
+    <p>Ingredient 2 {{ item.amount_2 }} {{ item.ingredient_2 }}</p>
+    <p>Ingredient 3 {{ item.amount_3 }} {{ item.ingredient_3 }}</p>
+    <p>Ingredient 4 {{ item.amount_4 }} {{ item.ingredient_4 }}</p>
+    <p>Ingredient 5 {{ item.amount_5 }} {{ item.ingredient_5 }}</p>
+    <p>Date Created: {{ item.date_created }}</p>
+  </div>
+</section>

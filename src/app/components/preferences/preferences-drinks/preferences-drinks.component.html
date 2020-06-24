@@ -1,0 +1,9 @@
+<div class="global-parent">
+  <h1>Saved Recipes</h1>
+  <p *ngIf="favorites.length === 0">You don't have any recipes?</p>
+  <div class="container" *ngFor="let item of favorites">
+    <p>{{ item.drink_name }}</p>
+    <a routerLink="saved-drinks/{{ item.saved_id }}">details</a>
+    <button (click)="onDelete(item.saved_id)">x</button>
+  </div>
+</div>

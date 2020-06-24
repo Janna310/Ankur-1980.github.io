@@ -1,0 +1,19 @@
+<div class="quiz-container">
+  <div class="progress center">
+    <div *ngFor="let question of allQuestions; let i = index" [ngClass]="{'on' : currentQuestion >= question.questionId}"></div>
+  </div>
+  <div class="question" [ngClass]="status ? 'answered' : 'unanswered'">
+    <p class="txt">{{question.questionText}}</p>
+    <div class="ans-container">
+      <div *ngFor="let option of question.options; let i = index">
+        <p class="ans" [ngClass]="{'selected' : status && selectedIndex === i}" (click)="onSelect(i)">{{option.optionText}}</p>
+      </div>
+    </div>
+    <div class="feedback" *ngIf="question && question.questionId !== totalQuestions">
+      <button (click)="navigateToNextQuestion()" class="continue btn">Continue</button>
+    </div>
+    <div *ngIf="question && question.questionId === totalQuestions">
+      <button type="button" (click)="navigateToResults()">Complete the Quiz!</button>
+    </div>
+  </div>
+</div>

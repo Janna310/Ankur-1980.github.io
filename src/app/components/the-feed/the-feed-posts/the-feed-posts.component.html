@@ -1,0 +1,56 @@
+<div class="background-img"></div>
+<div class="global-parent">
+  <div class="info-parent-container" *ngFor="let item of theFeed">
+    <img
+      width="400px"
+      src="{{ item.image_location }}"
+      alt="{{ item.drink_name }}"
+      class="border"
+    />
+    <h2>{{ item.drink_name }}</h2>
+    <div class="info-child-container">
+      <div class="info-container">
+        <label> Rating: </label>
+        <div class="item">{{ item.rating }}</div>
+      </div>
+      <div class="info-container">
+        <label> Glassware: </label>
+        <div class="item">{{ item.glassware }}</div>
+      </div>
+      <div class="info-container">
+        <label> Description: </label>
+        <div class="item-description">{{ item.description }}</div>
+      </div>
+      <div class="info-container">
+        <label> Location: </label>
+        <div class="item">{{ item.location }}</div>
+      </div>
+      <div class="info-container">
+        <label> Username: </label>
+        <div class="item">{{ item.username }}</div>
+      </div>
+      <div class="info-container">
+        <label> Date: </label>
+        <div class="item">{{ item.date_added | date }}</div>
+      </div>
+    </div>
+    <!-- comments container -->
+    <!-- <div class="comments-container">
+      <button (click)="toggle()">read comments</button>
+      <div *ngIf="!commentHide" class="comments">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
+          dignissimos molestiae assumenda at, dolor voluptatum!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
+          dignissimos molestiae assumenda at, dolor voluptatum!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
+          dignissimos molestiae assumenda at, dolor voluptatum!
+        </p>
+      </div>
+    </div> -->
+  </div>
+</div>

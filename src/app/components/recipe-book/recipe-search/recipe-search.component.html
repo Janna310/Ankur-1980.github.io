@@ -1,0 +1,28 @@
+<div class="global-parent">
+  <h1>Search Drinks</h1>
+
+  <form [formGroup]="nameSearch" (ngSubmit)="searchByName()">
+    <div class="form-group">
+      <input
+        type="text"
+        placeholder="Search by Name"
+        formControlName="searchName"
+      />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <form [formGroup]="letterSearch" (ngSubmit)="searchByLetter()">
+    <div class="form-group2">
+      <label for="alphabet"> Choose a Letter</label>
+      <select formControlName="letter" name="letter" id="letter">
+        <option value="">Letters</option>
+        <option *ngFor="let letters of alphabet" value="{{ letters }}">{{
+          letters
+        }}</option>
+      </select>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <a routerLink="/preferences">Back to preferences</a>
+</div>

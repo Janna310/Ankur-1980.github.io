@@ -1,0 +1,12 @@
+<div class="global-parent">
+  <h1>Bartenders</h1>
+  <div class="child-container">
+    <div *ngIf="bartenders.length > 0">
+      <div *ngFor="let item of bartenders">
+        <div>{{ item.fav_info }}</div>
+        <button (click)="onDelete(item.fav_id)">Delete</button>
+      </div>
+      <div *ngIf="bartenders.length <= 0">You don't like any bartenders?</div>
+    </div>
+  </div>
+</div>

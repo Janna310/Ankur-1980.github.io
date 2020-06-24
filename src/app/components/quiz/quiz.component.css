@@ -1,0 +1,138 @@
+/* .question {
+    position: absolute;
+    left: 1500px;
+}
+
+.results {
+    position: absolute;
+    left: 1500px;
+}
+
+.intro {
+    position: absolute;
+    left: 1500px;
+}  */
+
+.quiz-container {
+  width: 50%;
+  margin: 13vh auto;
+  border: 2px solid rgb(236, 184, 92, 0.5);
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 120px;
+}
+
+/* Progress  */
+
+.progress div {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(236, 184, 92, 0.5);
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.progress div.on,
+.progress div.answered {
+  background-color: rgb(236, 184, 92);
+}
+
+/* Question */
+.ans-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ans {
+  display: inline-block;
+  border: 2px solid rgb(236, 184, 92);
+  border-radius: 6px;
+  padding: 10px;
+  margin: 0px 7.5px 15px 7.5px;
+}
+
+.ans.selected {
+  border-color: #80bdad;
+}
+
+.unanswered .ans {
+  cursor: pointer;
+}
+
+.unanswered .ans:hover {
+  background-color: rgb(236, 184, 92, 0.5);
+  transition: all 0.3s ease 0s;
+}
+.answered .ans {
+  cursor: default;
+}
+
+/* Feedback */
+
+.feedback {
+  margin-top: 10px;
+  transition: opacity 1.5s, margin-top 1.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.feedback .btn {
+  cursor: pointer;
+  background: #80bdad;
+}
+
+.feedback .btn:hover {
+  background: #80bdad;
+  background-color: rgb(236, 184, 92);
+  transition: all 0.3s ease 0s;
+}
+
+.answered .feedback {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+/* Results  */
+
+.results .btn {
+  margin-right: 10px;
+  padding: 10px 10px 8px 42px;
+  background-repeat: no-repeat;
+  background-position: 10px 5px;
+  background-size: 25px 25px;
+  border-radius: 4px;
+  color: #342b38;
+  width: 180px;
+}
+.results .btn.email {
+  background-image: url(./images/mail.svg);
+  background-color: white;
+  padding-right: 16px;
+}
+
+.results .btn.twitter {
+  background-image: url(./images/twitter.svg);
+  background-color: white;
+}
+
+@media screen and (max-width: 380px) {
+  .ans-container {
+    flex-direction: column;
+  }
+  .ans {
+    width: 100%;
+    margin: 5px 0 5px 0;
+  }
+
+  .quiz-container {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-top: 60px;
+  }
+}

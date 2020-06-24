@@ -1,0 +1,11 @@
+<div class="global-parent">
+  <h1>locations</h1>
+  <p *ngIf="locations.length === 0">You don't have any favorite places?</p>
+
+  <div *ngIf="locations.length > 0">
+    <div *ngFor="let item of locations">
+      <p>{{ item.fav_info }}</p>
+      <button (click)="onDelete(item.fav_id)">Delete</button>
+    </div>
+  </div>
+</div>

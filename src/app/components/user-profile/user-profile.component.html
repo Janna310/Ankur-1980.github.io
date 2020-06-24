@@ -1,0 +1,35 @@
+<div class="background-img"></div>
+<div class="global-parent">
+  <div class="info-container" *ngFor="let item of userInfo">
+    <img class="profile-pic" width=" " src="{{ item.picture }}" alt="" />
+    <div class="user-info-container" *ngFor="let item of userInfo">
+      <h1>User Name: {{ item.first_name }} {{ item.last_name }}</h1>
+      <p>Bio: {{ item.bio }}</p>
+      <p>Age: {{ item.age }}</p>
+      <p>username: {{ item.username }}</p>
+      <button (click)="logOut()">Log Out</button>
+    </div>
+  </div>
+  <!-- Feed -->
+  <div class="feed-parent">
+    <div *ngFor="let post of posts">
+      <img
+        class="feed-images"
+        width=" "
+        src="{{ post.image_location }}"
+        alt="{{ post.drink_name }}"
+      />
+      <div>
+        <p>Drink Name: {{ post.drink_name }}</p>
+        <p>Rating: {{ post.rating }}</p>
+        <p>Description: {{ post.description }}</p>
+      </div>
+      <!-- post actions -->
+      <div class="post-actions">
+        <!-- <a routerLink="/post-details/{{ post.postID }}">More Details</a>
+        <a routerLink="/post-details/{{ post.postID }}/edit">Edit</a> -->
+        <button (click)="deletePost(post.post_id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

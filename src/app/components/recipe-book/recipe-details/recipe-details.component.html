@@ -1,0 +1,86 @@
+<div class="background-img">
+  <div class="global-parent">
+    <div class="details" *ngFor="let recipe of recipes">
+      <h1>{{ recipe.strDrink }}</h1>
+
+      <img
+        class="image"
+        src="{{ recipe.strDrinkThumb }}"
+        alt="{{ recipe.strDrink }}"
+        width="125px"
+      />
+
+      <h3>Glassware:</h3>
+      <div class="info">{{ recipe.strGlass }}</div>
+
+      <h3>Ingredients</h3>
+      <ul>
+        <li *ngIf="!!recipe.strMeasure1 || !!recipe.strIngredient1">
+          <span>{{ recipe.strMeasure1 }}</span>
+          <span>{{ recipe.strIngredient1 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure2 || !!recipe.strIngredient2">
+          <span>{{ recipe.strMeasure2 }}</span>
+          <span>{{ recipe.strIngredient2 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure3 || !!recipe.strIngredient3">
+          <span>{{ recipe.strMeasure3 }}</span>
+          <span>{{ recipe.strIngredient3 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure4 || !!recipe.strIngredient4">
+          <span>{{ recipe.strMeasure4 }}</span>
+          <span>{{ recipe.strIngredient4 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure5 || !!recipe.strIngredient5">
+          <span>{{ recipe.strMeasure5 }}</span>
+          <span>{{ recipe.strIngredient5 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure6 || !!recipe.strIngredient6">
+          <span>{{ recipe.strMeasure6 }}</span>
+          <span>{{ recipe.strIngredient6 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure7 || !!recipe.strIngredient7">
+          <span>{{ recipe.strMeasure7 }}</span>
+          <span>{{ recipe.strIngredient7 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure8 || !!recipe.strIngredient8">
+          <span>{{ recipe.strMeasure8 }}</span>
+          <span>{{ recipe.strIngredient8 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure9 || !!recipe.strIngredient9">
+          <span>{{ recipe.strMeasure9 }}</span>
+          <span>{{ recipe.strIngredient9 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure10 || !!recipe.strIngredient10">
+          <span>{{ recipe.strMeasure10 }}</span>
+          <span>{{ recipe.strIngredient10 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure11 || !!recipe.strIngredient11">
+          <span>{{ recipe.strMeasure11 }}</span>
+          <span>{{ recipe.strIngredient11 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure12 || !!recipe.strIngredient12">
+          <span>{{ recipe.strMeasure12 }}</span>
+          <span>{{ recipe.strIngredient12 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure13 || !!recipe.strIngredient13">
+          <span>{{ recipe.strMeasure13 }}</span>
+          <span>{{ recipe.strIngredient13 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure14 || !!recipe.strIngredient14">
+          <span>{{ recipe.strMeasure14 }}</span>
+          <span>{{ recipe.strIngredient14 }}</span>
+        </li>
+        <li *ngIf="!!recipe.strMeasure15 || !!recipe.strIngredient15">
+          <span>{{ recipe.strMeasure15 }}</span>
+          <span>{{ recipe.strIngredient15 }}</span>
+        </li>
+      </ul>
+      <div class="method">
+        <h3>Method:</h3>
+        <div>{{ recipe.strInstructions }}</div>
+      </div>
+      <a routerLink="/recipe-book">Back to search</a>
+    </div>
+  </div>
+</div>

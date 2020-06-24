@@ -1,0 +1,112 @@
+<div class="background-img"></div>
+<div class="global-parent">
+  <h1 class="center">New User Form</h1>
+  <div class="errors" *ngIf="errors.length > 0">
+    <span *ngFor="let error of errors">{{ error.message }}</span>
+  </div>
+  <!-- <div class="error" *ngIf="warning">{{ errorMessage }}</div> -->
+  <form [formGroup]="newUserForm" (ngSubmit)="register()">
+    <!-- first name & last name- required-->
+    <div class="form-group">
+      <div class="two-col">
+        <!-- First Name -->
+        <div class="first-name-container">
+          <label for="firstName" for="label-control">First Name</label>
+          <input type="text" formControlName="firstName" class="first-name" />
+          <span *ngIf="firstName.touched && firstName.errors?.required">
+            First Name is required
+          </span>
+        </div>
+        <!-- Last Name -->
+        <div class="last-name-container">
+          <label for="lastName" for="label-control">Last Name</label>
+          <input type="text" formControlName="lastName" class="last-name" />
+          <span *ngIf="lastName.touched && lastName.errors?.required">
+            Last Name is required
+          </span>
+        </div>
+      </div>
+      <!-- username - required -->
+      <div class="form-group">
+        <label for="userName" for="label-control"> User Name</label>
+        <input type="text" formControlName="userName" class="form-control" />
+        <span *ngIf="userName.touched && userName.errors?.required">
+          Last Name is required
+        </span>
+      </div>
+      <!-- age - required -->
+      <div class="form-group">
+        <label for="age" for="label-control"> Age</label>
+        <input
+          formControlName="age"
+          class="form-control"
+          type="number"
+          name="age"
+          placeholder="age"
+        />
+        <span *ngIf="age.errors?.min && age.touched">You are too young</span>
+      </div>
+      <!-- email - required -->
+      <div class="form-group">
+        <label for="email" for="label-control">Email</label>
+        <input type="email" formControlName="email" class="form-control" />
+        <span *ngIf="email.touched && email.errors?.required">
+          Email is required
+        </span>
+
+        <!-- bio - not required -->
+
+        <!-- password -1 - required -->
+        <div class="form-group">
+          <label for="password" for="label-control">Password:</label>
+          <input
+            type="password"
+            formControlName="password"
+            class="form-control"
+            placeholder="Enter Password"
+          />
+          <span *ngIf="password.touched && password.errors?.required">
+            Password is required
+          </span>
+        </div>
+        <!-- password -2- required -->
+        <div class="form-group">
+          <label for="password2" for="label-control">Confirm Password:</label>
+          <input
+            type="password"
+            formControlName="password2"
+            class="form-control"
+            placeholder="Confirm Password"
+          />
+          <span *ngIf="password2.touched && password2.errors?.required">
+            Please confirm password
+          </span>
+          <span *ngIf="password2.touched && password2.errors?.passwordMismatch">
+            Passwords do not match
+          </span>
+          <!-- bio - not required -->
+          <div class="form-group">
+            <label for="bio" for="label-control" rows="9" cols="50"
+              >Biography:</label
+            >
+            <textarea
+              formControlName="bio"
+              class="form-control"
+              placeholder="Limit 140 Characters"
+            >
+            </textarea>
+          </div>
+          <!-- submit button -->
+          <button [disabled]="newUserForm.invalid" type="submit">
+            Submit
+          </button>
+        </div>
+
+        <!-- Back to login screen -->
+        <p class="center">
+          Already registered? Click <a href="#"> here </a> to login
+        </p>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,19 @@
+<form (submit)="onSubmit()" [formGroup]="itemForm">
+  <div class="form-group">
+    <input
+      type="text"
+      name="title"
+      formControlName="info"
+      placeholder="Description"
+    />
+  </div>
+  <div class="form-group">
+    <select formControlName="category" name="category" id="category">
+      <option value=""></option>
+      <option *ngFor="let item of categories" value="{{ item.value }}">{{
+        item.name
+      }}</option>
+    </select>
+  </div>
+  <button type="submit">Save Item</button>
+</form>

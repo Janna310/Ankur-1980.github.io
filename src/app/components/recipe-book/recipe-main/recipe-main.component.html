@@ -1,0 +1,7 @@
+<div class="background-img"></div>
+
+<recipe-search (searchResults)="nameSearch($event)"></recipe-search>
+
+<div class="card-container">
+  <recipe-card [recipe]="recipe" *ngFor="let recipe of recipes"></recipe-card>
+</div>

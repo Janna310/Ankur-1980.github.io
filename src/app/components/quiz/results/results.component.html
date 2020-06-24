@@ -1,0 +1,22 @@
+<div class="quiz-container">
+  <div class="results">
+    <h3>Results</h3>
+    <div class="details" *ngFor="let recipe of recipes">
+      <div class="card-container">
+        <div class="drink-name">{{ recipe.strDrink }}</div>
+        <img class="image" src="{{ recipe.strDrinkThumb }}" alt="{{ recipe.strDrink }}"/>
+        <a routerLink="/recipe-book/recipe-details/{{ recipe.idDrink }}">View More Details</a>
+      </div>
+    </div>
+    <p class="center">Use the links below to share with your friends.</p>
+    <div class="share center">
+      <a class="btn email" href="mailto:">Email</a>
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+        class="twitter-share-button btn twitter"
+        data-text="Check out my quiz results from Top Shelf"
+        data-hashtags="#topshelf #social #cocktails"
+        data-show-count="false">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+/* Set background Image */
+.background-img {
+  background-image: url(../login-form/Margarita/margarita.svg);
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/*  */
+.two-col {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.first-name {
+  width: 100%;
+}
+.last-name-container {
+  margin-left: 8px;
+}
+.last-name {
+  width: 110%;
+}
+span {
+  flex-wrap: wrap;
+}
+
+/* .style {
+  text-emphasis-style: triangle;
+} */
+
+/* set form width and Height */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* form child layout*/
+.form-group {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* media Query for Tablets */
+/* @media screen and (max-width: 768px) {}
+
+/* Media Query for phone */
+@media screen and (max-width: 360px) {
+  .background {
+    margin-top: 5vh;
+    height: 80vh;
+    width: 100vw;
+  }
+  .last-name {
+    width: 100%;
+  }
+
+  .center {
+    font-size: 12px;
+  }
+}
