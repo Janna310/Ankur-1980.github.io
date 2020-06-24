@@ -124,6 +124,10 @@ button:hover {
 
 /* tablet sizing */
 @media screen and (max-width: 768px) {
+  .global-parent {
+    margin-top: 100px;
+  }
+
   input,
   textarea,
   select {

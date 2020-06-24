@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "topshelfdrinks-fdf08": {
+      "hosting": {
+        "Drinks-App": [
+          "topshelfdrinks-fdf08"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "topshelfdrinks-fdf08"
+  }
+}

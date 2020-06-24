@@ -5,10 +5,7 @@ import { FavoritesService } from 'src/app/services/favorites.service';
 @Component({
   selector: 'app-saved-drinks',
   templateUrl: './saved-drinks.component.html',
-  styleUrls: [
-    // './saved-drinks.component.css'
-    '../preferences-pages.css',
-  ],
+  styleUrls: ['./saved-drinks.component.css'],
 })
 export class SavedDrinksComponent implements OnInit {
   recipes;

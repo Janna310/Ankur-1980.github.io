@@ -49,10 +49,14 @@
 
 /* Tablet Sizing */
 @media screen and (max-width: 769px) {
+  .info-container {
+    width: 600px;
+  }
+
   .profile-pic {
     margin-top: 10vh;
-    width: 250px;
-    height: 250px;
+    width: 175px;
+    height: 175px;
   }
 
   .feed-parent {
@@ -98,7 +102,7 @@
 
   .feed-images {
     height: 100px;
-    width: auto;
+    width: 250px;
   }
 
   button {
