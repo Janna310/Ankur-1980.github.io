@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "preinstall": "npm install -g angular-cli",
-    "postinstall": "npm run serve && ng build --aot --prod",
+    "postinstall": "ng build --aot --prod",
     "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-    "start": "npm run build & concurrently --kill-others \"npm run serve-api\" ",
+    "start": "npm run build & concurrently --kill-others \"npm run serve-api\" \"npm run serve\" ",
     "serve": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build --output-path=dist",
     "serve-api": "nodemon ./backend/server.js",
@@ -19,6 +19,8 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "~9.1.0",
+    "@angular/compiler-cli": "~9.1.0",
     "@angular/animations": "~9.1.0",
     "@angular/common": "~9.1.0",
     "@angular/compiler": "~9.1.0",
