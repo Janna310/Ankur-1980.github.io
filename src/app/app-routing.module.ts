@@ -11,7 +11,7 @@ import { GuestGuard } from './services/guest.guard';
 const routes: Routes = [
   { path: '', component: LoginFormComponent, canActivate: [GuestGuard] },
   {
-    path: '',
+    path: '/',
     redirectTo: 'login',
     pathMatch: 'full',
   },
